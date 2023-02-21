@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      tittle: {
+      title: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "Authors",
+          model: "Users",
           key: "id",
         },
         onDelete: "cascade",

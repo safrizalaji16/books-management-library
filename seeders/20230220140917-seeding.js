@@ -15,7 +15,7 @@ module.exports = {
      * }], {});
      */
     await queryInterface.bulkInsert(
-      "Authors",
+      "Users",
       [
         {
           name: "Tere Liye",
@@ -26,6 +26,11 @@ module.exports = {
           name: "James Clear",
           email: "jamesclear@gmail.com",
           password: hashPassword("jamesclear"),
+        },
+        {
+          name: "User",
+          email: "user@gmail.com",
+          password: hashPassword("user"),
         },
       ],
       {}
@@ -46,13 +51,13 @@ module.exports = {
       "Books",
       [
         {
-          tittle: "Bulan",
+          title: "Bulan",
           description: "Novel bulan",
           AuthorId: 1,
           CategoryId: 1,
         },
         {
-          tittle: "Atomic Habits",
+          title: "Atomic Habits",
           description: "Memiliki habit yang baik",
           AuthorId: 2,
           CategoryId: 2,

@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
   }
   Book.init(
     {
-      tittle: {
+      title: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notNull: {
-            msg: "Tittle is required",
+            msg: "Title is required",
           },
           notEmpty: {
-            msg: "Tittle is required",
+            msg: "Title is required",
           },
         },
       },
