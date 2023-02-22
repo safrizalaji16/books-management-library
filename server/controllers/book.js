@@ -1,8 +1,10 @@
-const { Book } = require("../models");
+const { Book, User, Category } = require("../models");
 class Controller {
   static async readAllBooks(req, res, next) {
     try {
-      const books = await Book.findAll();
+      const books = await Book.findAll({
+        include: [{ model: User }, { model: Category }],
+      });
 
       res.status(200).json(books);
     } catch (err) {

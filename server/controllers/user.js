@@ -23,7 +23,7 @@ class Controller {
 
       const access_token = createToken({ id: findUser.id });
 
-      res.status(200).json({ access_token, msg: "Login Success!" });
+      res.status(200).json({ access_token, name: findUser.name });
     } catch (err) {
       next(err);
     }
